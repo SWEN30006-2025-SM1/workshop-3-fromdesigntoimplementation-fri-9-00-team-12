@@ -1,6 +1,7 @@
 package com.unimelb.swen30006.workshops;
 import java.util.Date;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Assignment {
     private String description;
@@ -18,4 +19,14 @@ public class Assignment {
         this.maxAttempts = maxAttempts;
         this.name = name;
     }
+    public void addSubmission(Submission submission) {
+        // Some logic to decide if it's valid or not
+        if(isValidSubmission(submission)) {
+            validSubmissions.add(submission);
+        } else {
+            invalidSubmissions.add(submission);
+        }
+    }
+
+
 }

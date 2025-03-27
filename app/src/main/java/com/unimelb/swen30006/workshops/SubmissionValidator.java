@@ -12,6 +12,17 @@ public interface SubmissionValidator {
      * @param submission the assignment submission to validate
      * @return an array of validation errors (or possibly null if no errors)
      */
+
+    /**
+     *     private boolean isValidSubmission(Submission submission) {
+     *         // e.g., check submission date <= dueDate and check attempt count <= maxAttempts
+     *         if ((submission.date.compare(this.dueDate) <= 0 ) && (submission.attemptNum <= this.maxAttempts)){
+     *
+     *         }
+     *         //       check file type is allowed, etc
+     *
+     *     }
+     */
     ValidationError[] validateSubmission(Submission submission);
 
 }
